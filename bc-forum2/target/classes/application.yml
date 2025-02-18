@@ -1,0 +1,26 @@
+server:
+  port: 8099
+
+database:
+  postgres: "db_2409p"
+
+spring.datasource:
+  # driverClassName: "org.hibernate.dialect.PostgreSQLDialect"
+  driverClassName: "org.postgresql.Driver"
+  url: "jdbc:postgresql://localhost:5432/${database.postgres}"
+  username: "postgres"
+  password: "admin1234"
+  
+spring.jpa:
+  show-sql: true
+  hibernate.ddl-auto: update # update
+
+api:
+  jph:
+    domain: "jsonplaceholder.typicode.com"
+    users:
+      endpoint: "/users"
+    posts:
+      endpoint: "/posts"
+    comments:
+      endpoint: "/comments"
